@@ -1,0 +1,321 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>更多名詞解釋 - OUTSS Guide</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="emergency.html">緊急聯絡資訊</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 出發之前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-1.html"><strong aria-hidden="true">1.1.</strong> 簽證申請</a></li><li class="chapter-item expanded "><a href="ch1-2.html"><strong aria-hidden="true">1.2.</strong> 行李打包建議</a></li><li class="chapter-item expanded "><a href="ch1-3.html"><strong aria-hidden="true">1.3.</strong> 入關文件</a></li><li class="chapter-item expanded "><a href="ch1-4.html"><strong aria-hidden="true">1.4.</strong> 赴英航班</a></li><li class="chapter-item expanded "><a href="ch1-5.html"><strong aria-hidden="true">1.5.</strong> 前往牛津</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.6.</strong> 關於錢</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-6-1.html"><strong aria-hidden="true">1.6.1.</strong> 要準備多少現金</a></li><li class="chapter-item expanded "><a href="ch1-6-2.html"><strong aria-hidden="true">1.6.2.</strong> 如何在英國領取自己臺灣帳戶內的金錢</a></li><li class="chapter-item expanded "><a href="ch1-6-3.html"><strong aria-hidden="true">1.6.3.</strong> 如何支付學費</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 抵達牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch2-1.html"><strong aria-hidden="true">2.1.</strong> 銀行開戶</a></li><li class="chapter-item expanded "><a href="ch2-2.html"><strong aria-hidden="true">2.2.</strong> 手機門號與行動網路</a></li><li class="chapter-item expanded "><a href="ch2-3.html"><strong aria-hidden="true">2.3.</strong> 學校 IT 服務</a></li><li class="chapter-item expanded "><a href="ch2-4.html"><strong aria-hidden="true">2.4.</strong> 註冊</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 牛津生活</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-1.html"><strong aria-hidden="true">3.1.</strong> 生活地圖</a></li><li class="chapter-item expanded "><a href="ch3-2.html"><strong aria-hidden="true">3.2.</strong> 購物</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> 行</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-3-1.html"><strong aria-hidden="true">3.3.1.</strong> 公車</a></li><li class="chapter-item expanded "><a href="ch3-3-2.html"><strong aria-hidden="true">3.3.2.</strong> 腳踏車</a></li><li class="chapter-item expanded "><a href="ch3-3-3.html"><strong aria-hidden="true">3.3.3.</strong> 計程車</a></li><li class="chapter-item expanded "><a href="ch3-3-4.html"><strong aria-hidden="true">3.3.4.</strong> 長程交通工具</a></li></ol></li><li class="chapter-item expanded "><a href="ch3-4.html"><strong aria-hidden="true">3.4.</strong> 住</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 關於牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch4-1.html"><strong aria-hidden="true">4.1.</strong> 牛津分區</a></li><li class="chapter-item expanded "><a href="ch4-2.html"><strong aria-hidden="true">4.2.</strong> 學期劃分</a></li><li class="chapter-item expanded "><a href="ch4-3.html"><strong aria-hidden="true">4.3.</strong> 服裝</a></li><li class="chapter-item expanded "><a href="ch4-4.html"><strong aria-hidden="true">4.4.</strong> Matriculation</a></li><li class="chapter-item expanded "><a href="ch4-5.html"><strong aria-hidden="true">4.5.</strong> Formal Dinner</a></li><li class="chapter-item expanded "><a href="ch4-6.html" class="active"><strong aria-hidden="true">4.6.</strong> 更多名詞解釋</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="footer.html">作者與版本</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OUTSS Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="更多名詞解釋"><a class="header" href="#更多名詞解釋">更多名詞解釋</a></h1>
+<h2 id="關於學校"><a class="header" href="#關於學校">關於學校</a></h2>
+<ul>
+<li>
+<p>Bodleian Library: 是牛津大學的圖書館群，藏書為全英國第二多，僅次於大英圖書館。牛津有非常多圖書館，都算是 Bodleian Library 的分支，像是學院和系所圖書館、Radcliffe Camera、Weston Library 及Radcliffe Science Library 等。
+學生可以依據自己的需求，來找尋適合的圖書資源。牛津大學所有的圖書資源都可以使用<a href="http://solo.bodleian.ox.ac.uk/">這個網站</a>查詢。</p>
+</li>
+<li>
+<p>Bod Card: 牛津大學的學生證，是進出系館、學院、各大圖書館、在學生餐廳付費、甚至進自己的房間所需使用的卡。因需使用它來進入 Bodleian Library，所以被稱做 Bod Card。如果遺失的話，請先跟學院掛失，補辦費用為 £15，完整流程可以參考學校<a href="https://estates.admin.ox.ac.uk/lost-cards">公告</a>。</p>
+</li>
+<li>
+<p>Sheldonian Theatre: 是 Matriculation 和畢業典禮的場地。也經常供各式音樂會演出使用。</p>
+</li>
+<li>
+<p>Examination School: 大學部和碩士生考試的場所，位在 high street 上。大部分科系的學生都要到這裡來應考，考試時的服儀規定跟 Matriculation 一樣是最高標準，必須穿著完整的 sub-fusc，可能還需配戴特殊的胸花。違反服儀規定之學生可能會被禁止入場參加考試。</p>
+</li>
+<li>
+<p>Carnations: 大學部考試時，胸前要別的胸花（花朵的顏色將根據考科或考試日程而有所不同）。通常考第一個科目時會配戴白色康乃馨，考最後一個科目時會配戴紅色康乃馨，其餘考科時則配戴粉色康乃馨。</p>
+</li>
+<li>
+<p>Fresher’s Fair: 每年10月初在 Examination school 所舉辦的新生社團聯展，通常有兩天。基本上，除了社團幹部之外，只有新生才能入場，學院會事先把手環放在每個新生的 pigeonhole 裡， 要佩戴手環才能入場。且通常 JCR 或 MCR 會安排一個時間帶同學院的新生一起過去，但也可以自行前往。</p>
+</li>
+</ul>
+<h2 id="關於學院"><a class="header" href="#關於學院">關於學院</a></h2>
+<ul>
+<li>
+<p>Informal Dinner: 非 formal dinner 的學院晚餐，大部分學院的地點一樣是在 dining hall，但其時段通常會在 formal dinner 之前。</p>
+</li>
+<li>
+<p>Buttery: Dining hall 內的取餐和付款處。部分學院的 buttery 還有另外賣三明治、飲料、牛奶、水果、沙拉吧等各種零食。有些學院還有 buttery 以外的咖啡廳及小吃部。</p>
+</li>
+<li>
+<p>Battels: 學院的記帳系統，通常用以紀錄有關 formal dinner、平日餐點、住宿費或其他雜項的錢。每學期初，學院會寄明細給每位學生，並註明繳費期限，通常可接受線上刷卡付清，但記得要按時繳費，否則還得支付額外遲交費。</p>
+</li>
+<li>
+<p>Lodge: 學院的警衛室。位在各學院的正門口，通常是 24 小時有人看守（聖誕節期間可能會關閉），負責管理鑰匙、人員進出、學院安全等等各式雜事。</p>
+</li>
+<li>
+<p>Porter: 學院警衛室的駐守人員，他們是學院的第一線人員和訊息傳遞站。基本上，如果在學院內遇到生活上的任何疑難雜症都可以找 porter，包括房間需要維修、 洗澡沒熱水、火警鈴的解除、忘記帶房門鑰匙等等。</p>
+</li>
+<li>
+<p>Pigeonhole: 經常簡稱 pidge，指位在學院（系館）內的個人信箱。即使你不住在學院裡面，每個學生在學院內（lodge附近），都會有一個個人信箱。因此，你的永久性地址可以填學院地址，但是需注意收件人一定要你的英文全名（同註冊資訊），否則寄不到。學院內信也是由 porter 負責簽收和管理。</p>
+</li>
+<li>
+<p>Common Rooms: 交誼廳，通常分為以下三種。JCR (Junior Common Room) 大學部學生會或交誼廳；MCR (Middle Common Room) 碩博研究生的學生會或交誼廳；SCR (Senior Common Room) fellow 和教職員的交誼廳，通常提供食物會比 JCR、MCR 豐富。通常學生和教職員只能進入和使用自己所屬的交誼廳，交誼廳內通常會有廚房、冰箱、電視、電動、桌遊等等之免費設施。部分學院不區分成員的身份會只有一個共同的 CR。</p>
+</li>
+<li>
+<p>Scout: 學院的清潔人員。每個學生宿舍通常會有 scout 定期清掃廚房等公共空間。也有些學生宿舍的 scout 會每周一次進到你的房間，清理垃圾、洗手台、地板等。</p>
+</li>
+<li>
+<p>BOP: Big Organised Party，學院所舉辦的小舞會（派對），通常辦在交誼廳裡，並且會有特定主題。服裝方面，可以穿著 smart casual。BOP 一學期會舉辦一次。</p>
+</li>
+<li>
+<p>Ball: 學院所舉辦的（年度或幾年度一次）大型舞會。可以自由參加其他學院的 Ball，票價通常都要 £100 起跳。服裝規定一般是 white tie 或 black tie。一般都辦在學院裡（從晚上到凌晨，甚至通宵）。有時還有煙火、碰碰車等遊樂設施，或者歌手／樂團的演出。</p>
+</li>
+</ul>
+<h2 id="關於課程"><a class="header" href="#關於課程">關於課程</a></h2>
+<ul>
+<li>
+<p>Colloquium: 相當於Seminar。</p>
+</li>
+<li>
+<p>Lecture: 大班制教學的課，可對應到台灣或美國的 class。通常是整個年級一起上，牛津很多 lecture 只有一個小時就下課，每堂課的時長相對較短。</p>
+</li>
+<li>
+<p>Tutorial: 牛津大學部獨有的一對一或小班制教學課程。學期間，大學部學生會有很多 tutorial 課程，地點可能在系上或在學院內上課。Tutor 可能是教授也可能是博士生。擔任 tutor 可以賺取對應的薪資，詳情可諮詢學院或系上。</p>
+</li>
+<li>
+<p>Demonstrator/Tutor: 研究生比較常聽到的名詞，兩種都是助教的種類。Demonstrator 多半指的是隨堂助教，在課堂上（通常是實習課或野外課）協助老師教學，及解答一些學生的問題等。Tutor 則是完全要自己上課，通常採小班制，不會有老師在場，要自己全程授課或解題。兩者的時薪也不同。</p>
+</li>
+<li>
+<p>DPhil/MPhil: Doctor/Master of Philosophy，牛津對於博士／研究型碩士學位的稱呼。</p>
+</li>
+</ul>
+<h2 id="其他"><a class="header" href="#其他">其他</a></h2>
+<ul>
+<li>
+<p>Varsity: 每年牛津跟劍橋在 Hilary Term 所舉辦的運動比賽。有各式各樣的運動競技項目，兩邊學校會派出校隊（Squad）參賽，也是兩邊居民非常重視的年度活動。比賽地點就在牛津或劍橋（不會全部項目都在同個學校比），最熱門的項目牛劍賽艇（Rowing）對抗賽每年四月會在倫敦的泰晤士河上舉行。</p>
+</li>
+<li>
+<p>Blue: 校隊成員中的代表 first team 參加過 varsity，或曾在英國大學運動競技聯盟（BUCS）比賽過的選手。每種運動項目對於 blue 的入選資格不太一樣。學校會頒發證書給符合 blue 資格的學生，而且該學生將可購買鑲有Blue徽章和特製紋路的西裝外套等服飾和配件。Blue 是牛津大學體育類的榮譽指標。</p>
+</li>
+<li>
+<p>Half-Blue: 為校隊成員但成績、表現或參賽頻率未達到 blue 標準者。有時可以獲頒 half-Blue 的殊榮。其入選資格規定，也是因運動項目而異。</p>
+</li>
+</ul>
+<!--+ Clubbing: 上夜店。英國的夜店不算是不良場所，尤其在牛津城裡，大部分上夜店的都是大學生，相對單純。英國大學生去夜店就像台灣人去KTV一樣稀鬆平常，是滿多人喜歡的娛樂活動。
+
++ Trashing: 牛津大學的傳統之一，於 Trinity Term，在大學部或碩士生考完最後一科後，會有人當街對你丟彩帶，噴香檳、砸刮鬍泡或奶油等等。固定發生的地點是在 nerton street，校方還會部分封街，讓學生更自由地 trashing。
+
++ Tab: 暗指劍橋學生。the other place/school 或 the dark side 則是暗指劍橋大學。
+
+
++ Kebab: 是一種中東料理，但又可以指晚上才會開賣的移動餐車。此類食物包含沙威瑪、捲餅、漢堡、薯條、炸雞等等，有些還會有披薩。在High Street或市中心其他地方有很多家在賣，從晚上七點開始營業到凌晨，讓有夜讀習慣的同學可以有宵夜吃。價格一般不高（4 – 6英磅），且份量很大。-->
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="ch4-5.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="footer.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="ch4-5.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="footer.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>簽證申請 - OUTSS Guide</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="emergency.html">緊急聯絡資訊</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 出發之前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-1.html" class="active"><strong aria-hidden="true">1.1.</strong> 簽證申請</a></li><li class="chapter-item expanded "><a href="ch1-2.html"><strong aria-hidden="true">1.2.</strong> 行李打包建議</a></li><li class="chapter-item expanded "><a href="ch1-3.html"><strong aria-hidden="true">1.3.</strong> 入關文件</a></li><li class="chapter-item expanded "><a href="ch1-4.html"><strong aria-hidden="true">1.4.</strong> 赴英航班</a></li><li class="chapter-item expanded "><a href="ch1-5.html"><strong aria-hidden="true">1.5.</strong> 前往牛津</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.6.</strong> 關於錢</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-6-1.html"><strong aria-hidden="true">1.6.1.</strong> 要準備多少現金</a></li><li class="chapter-item expanded "><a href="ch1-6-2.html"><strong aria-hidden="true">1.6.2.</strong> 如何在英國領取自己臺灣帳戶內的金錢</a></li><li class="chapter-item expanded "><a href="ch1-6-3.html"><strong aria-hidden="true">1.6.3.</strong> 如何支付學費</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 抵達牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch2-1.html"><strong aria-hidden="true">2.1.</strong> 銀行開戶</a></li><li class="chapter-item expanded "><a href="ch2-2.html"><strong aria-hidden="true">2.2.</strong> 手機門號與行動網路</a></li><li class="chapter-item expanded "><a href="ch2-3.html"><strong aria-hidden="true">2.3.</strong> 學校 IT 服務</a></li><li class="chapter-item expanded "><a href="ch2-4.html"><strong aria-hidden="true">2.4.</strong> 註冊</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 牛津生活</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-1.html"><strong aria-hidden="true">3.1.</strong> 生活地圖</a></li><li class="chapter-item expanded "><a href="ch3-2.html"><strong aria-hidden="true">3.2.</strong> 購物</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> 行</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-3-1.html"><strong aria-hidden="true">3.3.1.</strong> 公車</a></li><li class="chapter-item expanded "><a href="ch3-3-2.html"><strong aria-hidden="true">3.3.2.</strong> 腳踏車</a></li><li class="chapter-item expanded "><a href="ch3-3-3.html"><strong aria-hidden="true">3.3.3.</strong> 計程車</a></li><li class="chapter-item expanded "><a href="ch3-3-4.html"><strong aria-hidden="true">3.3.4.</strong> 長程交通工具</a></li></ol></li><li class="chapter-item expanded "><a href="ch3-4.html"><strong aria-hidden="true">3.4.</strong> 住</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 關於牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch4-1.html"><strong aria-hidden="true">4.1.</strong> 牛津分區</a></li><li class="chapter-item expanded "><a href="ch4-2.html"><strong aria-hidden="true">4.2.</strong> 學期劃分</a></li><li class="chapter-item expanded "><a href="ch4-3.html"><strong aria-hidden="true">4.3.</strong> 服裝</a></li><li class="chapter-item expanded "><a href="ch4-4.html"><strong aria-hidden="true">4.4.</strong> Matriculation</a></li><li class="chapter-item expanded "><a href="ch4-5.html"><strong aria-hidden="true">4.5.</strong> Formal Dinner</a></li><li class="chapter-item expanded "><a href="ch4-6.html"><strong aria-hidden="true">4.6.</strong> 更多名詞解釋</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="footer.html">作者與版本</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OUTSS Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="簽證申請"><a class="header" href="#簽證申請">簽證申請</a></h1>
+<ol>
+<li>前置作業：
+<ul>
+<li>新生確定接收無條件錄取通知書 (completion of conditions letter) 後，學校會合法擔保該學生的赴英留學簽證申請。</li>
+<li>理工科學生要先申請 ATAS (the academic technology approval scheme) 才能申請簽證，相關內容參考<a href="https://www.ox.ac.uk/students/visa/before/ATAS">校方網站</a>。</li>
+</ul>
+</li>
+<li>線上申請
+<ul>
+<li>前往英國移民署簽證<a href="https://www.gov.uk/student-visa">申請頁面</a>填寫簽證申請表單。</li>
+<li>大部分 16 歲以上並且申請入讀高等教育的台灣留學生需要申請 student visa（以前稱為 tier 4 general）。</li>
+<li>繳交簽證費 (visa fee) 與醫療附加費 (healthcare surcharge)。
+<ul>
+<li>醫療附加費 (Healthcare Surcharge) 適用申請赴英工作、學習或和家人團聚超過6個月的非歐洲經濟區公民。一年約776英鎊，實際金額將根據課程時長和簽證類型有所不同，可至<a href="https://www.immigration-health-surcharge.service.gov.uk/checker/type">醫療附加費計算頁面</a> 試算。</li>
+</ul>
+</li>
+<li>隨行家屬：通常需要支付和主申請人相同的費用。</li>
+</ul>
+</li>
+<li>預約與現場繳交
+<ul>
+<li>完成線上申請/預約後，根據預約時間前往台灣的英國外委簽證中心威孚國際 (VFS Global) 繳交文件及生物特徵掃瞄。</li>
+<li><a href="https://www.gov.uk/biometric-residence-permits">生物識別晶片居留許可</a> (biometric residence permit, BRP) 是一個包含你生物資訊如指紋、照片等的居留卡，出入境英國都會需要。BRP 非常重要，遺失補辦程序麻煩，請務必妥善保管。</li>
+</ul>
+</li>
+<li>特別注意事項
+<ul>
+<li>遞交文件當天，VFS Global 會收走你的護照直到通知取件。</li>
+<li>因此在遞交申請文件及護照期間，如果有計劃其他出國行程，請提前申請簽證以避開其他出國行程的衝突。</li>
+</ul>
+</li>
+<li>申請完成與後續
+<ul>
+<li>簽證成功後，你會收到回收的護照，此時護照上已經貼有首次入境許可證，請務必確認你的行程在入境許可所允許的期限內，以免影響入境和後續手續。</li>
+<li>簽證申請決定信：你會收到一封英國移民局開的簽證申請決定信，信中包含 BRP 的到達時間以及領取地點，可以選擇在郵局或學校學院領取。</li>
+<li>領取 BRP 時需要帶上貼有入境許可的護照，必須在抵達英國的 10 天內領取 BRP。</li>
+</ul>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="emergency.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="ch1-2.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="emergency.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="ch1-2.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

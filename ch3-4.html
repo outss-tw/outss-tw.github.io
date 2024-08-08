@@ -1,0 +1,312 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>住 - OUTSS Guide</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="emergency.html">緊急聯絡資訊</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 出發之前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-1.html"><strong aria-hidden="true">1.1.</strong> 簽證申請</a></li><li class="chapter-item expanded "><a href="ch1-2.html"><strong aria-hidden="true">1.2.</strong> 行李打包建議</a></li><li class="chapter-item expanded "><a href="ch1-3.html"><strong aria-hidden="true">1.3.</strong> 入關文件</a></li><li class="chapter-item expanded "><a href="ch1-4.html"><strong aria-hidden="true">1.4.</strong> 赴英航班</a></li><li class="chapter-item expanded "><a href="ch1-5.html"><strong aria-hidden="true">1.5.</strong> 前往牛津</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.6.</strong> 關於錢</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-6-1.html"><strong aria-hidden="true">1.6.1.</strong> 要準備多少現金</a></li><li class="chapter-item expanded "><a href="ch1-6-2.html"><strong aria-hidden="true">1.6.2.</strong> 如何在英國領取自己臺灣帳戶內的金錢</a></li><li class="chapter-item expanded "><a href="ch1-6-3.html"><strong aria-hidden="true">1.6.3.</strong> 如何支付學費</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 抵達牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch2-1.html"><strong aria-hidden="true">2.1.</strong> 銀行開戶</a></li><li class="chapter-item expanded "><a href="ch2-2.html"><strong aria-hidden="true">2.2.</strong> 手機門號與行動網路</a></li><li class="chapter-item expanded "><a href="ch2-3.html"><strong aria-hidden="true">2.3.</strong> 學校 IT 服務</a></li><li class="chapter-item expanded "><a href="ch2-4.html"><strong aria-hidden="true">2.4.</strong> 註冊</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 牛津生活</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-1.html"><strong aria-hidden="true">3.1.</strong> 生活地圖</a></li><li class="chapter-item expanded "><a href="ch3-2.html"><strong aria-hidden="true">3.2.</strong> 購物</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> 行</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-3-1.html"><strong aria-hidden="true">3.3.1.</strong> 公車</a></li><li class="chapter-item expanded "><a href="ch3-3-2.html"><strong aria-hidden="true">3.3.2.</strong> 腳踏車</a></li><li class="chapter-item expanded "><a href="ch3-3-3.html"><strong aria-hidden="true">3.3.3.</strong> 計程車</a></li><li class="chapter-item expanded "><a href="ch3-3-4.html"><strong aria-hidden="true">3.3.4.</strong> 長程交通工具</a></li></ol></li><li class="chapter-item expanded "><a href="ch3-4.html" class="active"><strong aria-hidden="true">3.4.</strong> 住</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 關於牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch4-1.html"><strong aria-hidden="true">4.1.</strong> 牛津分區</a></li><li class="chapter-item expanded "><a href="ch4-2.html"><strong aria-hidden="true">4.2.</strong> 學期劃分</a></li><li class="chapter-item expanded "><a href="ch4-3.html"><strong aria-hidden="true">4.3.</strong> 服裝</a></li><li class="chapter-item expanded "><a href="ch4-4.html"><strong aria-hidden="true">4.4.</strong> Matriculation</a></li><li class="chapter-item expanded "><a href="ch4-5.html"><strong aria-hidden="true">4.5.</strong> Formal Dinner</a></li><li class="chapter-item expanded "><a href="ch4-6.html"><strong aria-hidden="true">4.6.</strong> 更多名詞解釋</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="footer.html">作者與版本</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OUTSS Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="住"><a class="header" href="#住">住</a></h1>
+<p>在牛津，住宿選擇主要有學院宿舍、學校宿舍和校外租屋三種。</p>
+<h2 id="學院宿舍-college-accommodation"><a class="header" href="#學院宿舍-college-accommodation">學院宿舍 (College Accommodation)</a></h2>
+<ul>
+<li>學院會主動通知床位狀況，一些學院僅提供本址（main site）宿舍，有些學院提供市區或其他地區宿舍。</li>
+<li>查詢方式：直接向學院住宿組諮詢，查詢學院網站，若宿舍滿，可以試著聯繫其他學院。</li>
+<li>注意事項：確認是否需要在寒假或暑假搬出。</li>
+<li>價格範圍：£600 – £900 每月，通常包括水電網路等費用。</li>
+<li>重要叮嚀：火警演習可能會不定時進行，即便在睡夢中也需立即響應。演習時，若不參與，可能會遭受處罰。有時一個人未參與演習就會整棟重新來過直到每個人都有參與。</li>
+</ul>
+<h2 id="學校宿舍-university-accommodation"><a class="header" href="#學校宿舍-university-accommodation">學校宿舍 (University Accommodation)</a></h2>
+<ul>
+<li>由牛津大學直接管理，不屬於各學院，需向 University Graduate Accommodation 申請抽籤。</li>
+<li>主要對象為碩士和博士研究生。</li>
+<li>約有十五處宿舍可供選擇，通常比學院宿舍便宜。</li>
+<li>每年可以登記抽籤，新生申請時會有優先排序，競爭激烈，中籤率時常會等後補，候補一但到號就需決定放棄/保留。</li>
+<li>位於 Banbury Road 上的 <a href="https://nooc.org.uk/">North Oxford Overseas Centre (NOOC)</a> 提供一年左右的短期住宿，適合第一年找不到住宿的海外學生，短期訪問學者或交換學生也可以申請。此宿舍也會定期舉辦交誼活動。</li>
+</ul>
+<h2 id="校外租屋"><a class="header" href="#校外租屋">校外租屋</a></h2>
+<ul>
+<li>在外租屋價格不一，愈近市中心愈貴，</li>
+<li>一些注意事項
+<ul>
+<li>Council tax： 在你住進租屋處後 2 – 3 週會收到 Council 來信，租屋人催繳稅。但是學生是不用繳 Council tax 的，所以細節省略，只需要你去在學校網站上把在學證明（Student Statement）印下來，到學院蓋章寄回給 Council 就可以了。</li>
+<li>Utility Bills: ：租金是否包含水費、電費、瓦斯費等等，務必與房束諮詢清楚。
+另外，這裡不像台灣只有一家電力公司與水利公司，英國各家公司計費不同，又依據地區不同有不同價位。可以上網比較費率後，再決定使用哪一家的方案（參考網站：<a href="https://www.dailyinfo.co.uk/">Daily Info</a>）。</li>
+</ul>
+<ul>
+<li>Deposit：房租是否需要另付訂金，和訂金返還的規定。</li>
+<li>治安：可以於白天、晚上去有意向的租屋處附近晃晃，看街道安全與寧靜程度是否合適。在牛津，一般來說 Cowley Road 是治安相對較差的區域。</li>
+<li>交通：建議考量往返工作場所或上課系館是否方便，以及是否需要購買交通工具（如：腳踏車）；若沒有購買交通工具的打算，則可以考量大眾交通工具的方便性。</li>
+</ul>
+</li>
+<li>學校的 Accommodation Office 提供了一些在外租屋的資訊。</li>
+<li>一些牛津常見的租屋網: <a href="https://www.rightmove.co.uk/">Rightmove</a>、<a href="https://www.zoopla.co.uk/">Zoopla</a>、<a href="https://www.spareroom.co.uk">Spareroom</a>、<a href="https://www.dailyinfo.co.uk/oxford-accommodation">Daily Info</a>、<a href="https://www.facebook.com/groups/160632823948859/">OxGradHousing</a>。</li>
+</ul>
+<h2 id="英國常見宿舍房型"><a class="header" href="#英國常見宿舍房型">英國常見宿舍房型</a></h2>
+<ul>
+<li>Standard/ Study/ Shared/ Single Room
+<ul>
+<li>配置：擁有臥室、書桌、衣櫃、椅子。</li>
+<li>共用設施：與他人共用廚房與衛浴。</li>
+<li>面積：約 10 平方公尺。</li>
+<li>價格：通常較便宜。</li>
+</ul>
+</li>
+<li>En-suite
+<ul>
+<li>配置：臥室內有獨立衛浴（少數有浴缸），其他與 Standard Room 相似。</li>
+<li>共用設施：與 4–6 人共用廚房。</li>
+<li>面積：約 13-15 平方公尺。</li>
+<li>價格：較 Standard Room 稍高。</li>
+</ul>
+</li>
+<li>Premium En-suite/ Twin Room
+<ul>
+<li>配置：面積更大，適合雙人入住，配有兩張書桌、兩把椅子及兩床。</li>
+<li>共用設施：通常與他人共用廚房。</li>
+</ul>
+</li>
+<li>Studio
+<ul>
+<li>配置：擁有獨立衛浴和獨立廚房，通常有客廳、臥室和廚房在同一空間內。</li>
+<li>面積：最小約 20 平方公尺。</li>
+</ul>
+</li>
+<li>One Bedroom Flat
+<ul>
+<li>配置：擁有客廳、獨立衛浴和獨立廚房，臥室與客廳分開。</li>
+<li>面積：通常較 Studio 大。</li>
+</ul>
+</li>
+<li>Flat
+<ul>
+<li>配置：由一間一間的 Standard Room 或 En-suite 組成的公寓。</li>
+</ul>
+</li>
+<li>House
+<ul>
+<li>配置：獨立樓房，一般適合家庭或三五好友一起居住。</li>
+</ul>
+</li>
+</ul>
+<h2 id="一些建議"><a class="header" href="#一些建議">一些建議</a></h2>
+<p>如果是牛津新生，學院若能提供住宿，建議第一年可以住學院，除了可以省去找房子的麻煩，也因為學院通常會有餐廳，吃飯也會相對方便許多。另外，牛津很多的社交活動是以學院為單位的，學院內部常常舉辦各類活動，新生可以藉此認識許多同學院的朋友，快速拓展人際關係。只是學院內部住宿多沒有電梯，還需留意。另外，任何的註冊資訊若需要填寫地址，一律建議寄到學院，而非居住地址。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="ch3-3-4.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="ch4-1.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="ch3-3-4.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="ch4-1.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

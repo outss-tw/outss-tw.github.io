@@ -1,0 +1,923 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>OUTSS Guide</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="emergency.html">緊急聯絡資訊</a></li><li class="chapter-item expanded affix "><li class="spacer"></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> 出發之前</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-1.html"><strong aria-hidden="true">1.1.</strong> 簽證申請</a></li><li class="chapter-item expanded "><a href="ch1-2.html"><strong aria-hidden="true">1.2.</strong> 行李打包建議</a></li><li class="chapter-item expanded "><a href="ch1-3.html"><strong aria-hidden="true">1.3.</strong> 入關文件</a></li><li class="chapter-item expanded "><a href="ch1-4.html"><strong aria-hidden="true">1.4.</strong> 赴英航班</a></li><li class="chapter-item expanded "><a href="ch1-5.html"><strong aria-hidden="true">1.5.</strong> 前往牛津</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.6.</strong> 關於錢</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch1-6-1.html"><strong aria-hidden="true">1.6.1.</strong> 要準備多少現金</a></li><li class="chapter-item expanded "><a href="ch1-6-2.html"><strong aria-hidden="true">1.6.2.</strong> 如何在英國領取自己臺灣帳戶內的金錢</a></li><li class="chapter-item expanded "><a href="ch1-6-3.html"><strong aria-hidden="true">1.6.3.</strong> 如何支付學費</a></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 抵達牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch2-1.html"><strong aria-hidden="true">2.1.</strong> 銀行開戶</a></li><li class="chapter-item expanded "><a href="ch2-2.html"><strong aria-hidden="true">2.2.</strong> 手機門號與行動網路</a></li><li class="chapter-item expanded "><a href="ch2-3.html"><strong aria-hidden="true">2.3.</strong> 學校 IT 服務</a></li><li class="chapter-item expanded "><a href="ch2-4.html"><strong aria-hidden="true">2.4.</strong> 註冊</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 牛津生活</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-1.html"><strong aria-hidden="true">3.1.</strong> 生活地圖</a></li><li class="chapter-item expanded "><a href="ch3-2.html"><strong aria-hidden="true">3.2.</strong> 購物</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.3.</strong> 行</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch3-3-1.html"><strong aria-hidden="true">3.3.1.</strong> 公車</a></li><li class="chapter-item expanded "><a href="ch3-3-2.html"><strong aria-hidden="true">3.3.2.</strong> 腳踏車</a></li><li class="chapter-item expanded "><a href="ch3-3-3.html"><strong aria-hidden="true">3.3.3.</strong> 計程車</a></li><li class="chapter-item expanded "><a href="ch3-3-4.html"><strong aria-hidden="true">3.3.4.</strong> 長程交通工具</a></li></ol></li><li class="chapter-item expanded "><a href="ch3-4.html"><strong aria-hidden="true">3.4.</strong> 住</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 關於牛津</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch4-1.html"><strong aria-hidden="true">4.1.</strong> 牛津分區</a></li><li class="chapter-item expanded "><a href="ch4-2.html"><strong aria-hidden="true">4.2.</strong> 學期劃分</a></li><li class="chapter-item expanded "><a href="ch4-3.html"><strong aria-hidden="true">4.3.</strong> 服裝</a></li><li class="chapter-item expanded "><a href="ch4-4.html"><strong aria-hidden="true">4.4.</strong> Matriculation</a></li><li class="chapter-item expanded "><a href="ch4-5.html"><strong aria-hidden="true">4.5.</strong> Formal Dinner</a></li><li class="chapter-item expanded "><a href="ch4-6.html"><strong aria-hidden="true">4.6.</strong> 更多名詞解釋</a></li></ol></li><li class="chapter-item expanded "><li class="spacer"></li><li class="chapter-item expanded affix "><a href="footer.html">作者與版本</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">OUTSS Guide</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="緊急聯絡資訊"><a class="header" href="#緊急聯絡資訊">緊急聯絡資訊</a></h1>
+<h2 id="駐英國台北代表處"><a class="header" href="#駐英國台北代表處"><a href="https://www.roc-taiwan.org/uk/index.html">駐英國台北代表處</a></a></h2>
+<ul>
+<li>地址: 50 Grosvenor Gardens London SW1W 0EB United Kingdom</li>
+<li>電話: 20-7881-2650</li>
+<li>急難救助電話: 7768-938-765</li>
+<li>電郵: <a href="mailto:gbr@mofa.gov.tw">gbr@mofa.gov.tw</a></li>
+</ul>
+<h2 id="駐英國代表處教育組"><a class="header" href="#駐英國代表處教育組"><a href="https://www.roc-taiwan.org/uk/post/12.html">駐英國代表處教育組</a></a></h2>
+<ul>
+<li>地址: Suite 3, 73/75 Mortimer Street, London W1W 7SQ</li>
+<li>電話: 20-7436-5888</li>
+<li>電郵: <a href="mailto:london@mail.moe.gov.tw">london@mail.moe.gov.tw</a></li>
+</ul>
+<h2 id="university-security-services"><a class="header" href="#university-security-services">University Security Services</a></h2>
+<ul>
+<li>電話 (emergency)：01865-289999</li>
+<li>電話 (nightline 8pm-8am)：01865-270270</li>
+</ul>
+<h2 id="牛津大學臺灣同學會"><a class="header" href="#牛津大學臺灣同學會"><a href="https://outss.web.ox.ac.uk">牛津大學臺灣同學會</a></a></h2>
+<ul>
+<li>電郵: <a href="mailto:oxford.outss.tw@gmail.com">oxford.outss.tw@gmail.com</a></li>
+<li>Facebook Group: <a href="https://www.facebook.com/groups/OUTSS">OUTSS</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="簽證申請"><a class="header" href="#簽證申請">簽證申請</a></h1>
+<ol>
+<li>前置作業：
+<ul>
+<li>新生確定接收無條件錄取通知書 (completion of conditions letter) 後，學校會合法擔保該學生的赴英留學簽證申請。</li>
+<li>理工科學生要先申請 ATAS (the academic technology approval scheme) 才能申請簽證，相關內容參考<a href="https://www.ox.ac.uk/students/visa/before/ATAS">校方網站</a>。</li>
+</ul>
+</li>
+<li>線上申請
+<ul>
+<li>前往英國移民署簽證<a href="https://www.gov.uk/student-visa">申請頁面</a>填寫簽證申請表單。</li>
+<li>大部分 16 歲以上並且申請入讀高等教育的台灣留學生需要申請 student visa（以前稱為 tier 4 general）。</li>
+<li>繳交簽證費 (visa fee) 與醫療附加費 (healthcare surcharge)。
+<ul>
+<li>醫療附加費 (Healthcare Surcharge) 適用申請赴英工作、學習或和家人團聚超過6個月的非歐洲經濟區公民。一年約776英鎊，實際金額將根據課程時長和簽證類型有所不同，可至<a href="https://www.immigration-health-surcharge.service.gov.uk/checker/type">醫療附加費計算頁面</a> 試算。</li>
+</ul>
+</li>
+<li>隨行家屬：通常需要支付和主申請人相同的費用。</li>
+</ul>
+</li>
+<li>預約與現場繳交
+<ul>
+<li>完成線上申請/預約後，根據預約時間前往台灣的英國外委簽證中心威孚國際 (VFS Global) 繳交文件及生物特徵掃瞄。</li>
+<li><a href="https://www.gov.uk/biometric-residence-permits">生物識別晶片居留許可</a> (biometric residence permit, BRP) 是一個包含你生物資訊如指紋、照片等的居留卡，出入境英國都會需要。BRP 非常重要，遺失補辦程序麻煩，請務必妥善保管。</li>
+</ul>
+</li>
+<li>特別注意事項
+<ul>
+<li>遞交文件當天，VFS Global 會收走你的護照直到通知取件。</li>
+<li>因此在遞交申請文件及護照期間，如果有計劃其他出國行程，請提前申請簽證以避開其他出國行程的衝突。</li>
+</ul>
+</li>
+<li>申請完成與後續
+<ul>
+<li>簽證成功後，你會收到回收的護照，此時護照上已經貼有首次入境許可證，請務必確認你的行程在入境許可所允許的期限內，以免影響入境和後續手續。</li>
+<li>簽證申請決定信：你會收到一封英國移民局開的簽證申請決定信，信中包含 BRP 的到達時間以及領取地點，可以選擇在郵局或學校學院領取。</li>
+<li>領取 BRP 時需要帶上貼有入境許可的護照，必須在抵達英國的 10 天內領取 BRP。</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="行李打包建議"><a class="header" href="#行李打包建議">行李打包建議</a></h1>
+<p>大部分生活需要的用品，在牛津都不難取得，包含各式亞洲零食與調味品。
+切記不需要把自己的行李箱裝滿各種鍋碗瓢盆、滷包乾貨甚至是平版衛生紙。然而，若有特殊常用藥品、處方用藥、眼鏡、隱形眼鏡，或其他較不易取得的個人用品則建議攜帶。</p>
+<h2 id="建議攜帶"><a class="header" href="#建議攜帶">建議攜帶</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+國際駕照（如有）</li>
+<li><input disabled="" type="checkbox"/>
+台灣駕照</li>
+<li><input disabled="" type="checkbox"/>
+個人藥品</li>
+<li><input disabled="" type="checkbox"/>
+保養品</li>
+<li><input disabled="" type="checkbox"/>
+電子產品的充電器</li>
+<li><input disabled="" type="checkbox"/>
+白襯衫、黑皮鞋（入學典禮用）</li>
+<li><input disabled="" type="checkbox"/>
+禮服、洋裝、西裝和領帶</li>
+<li><input disabled="" type="checkbox"/>
+洗衣網、洗衣袋</li>
+<li><input disabled="" type="checkbox"/>
+禦寒衣物</li>
+<li><input disabled="" type="checkbox"/>
+備用眼鏡</li>
+<li><input disabled="" type="checkbox"/>
+隱形眼鏡</li>
+<li><input disabled="" type="checkbox"/>
+萬國轉接插頭</li>
+</ul>
+<h2 id="不建議攜帶"><a class="header" href="#不建議攜帶">不建議攜帶</a></h2>
+<ul>
+<li>濾水器</li>
+<li>廚具</li>
+<li>米</li>
+<li>寢具</li>
+<li>吹風機(電壓不同)</li>
+<li>延長線(電壓不同)</li>
+</ul>
+<h2 id="注意事項"><a class="header" href="#注意事項">注意事項</a></h2>
+<ul>
+<li>不要帶任何肉類，包含牛肉乾、豬肉及乾肉鬆。</li>
+<li>不要帶防狼噴霧，英國法規禁止攜帶防狼噴霧，違反者最高可處 10 年有期徒刑。</li>
+<li>完整規定可參考<a href="https://www.gov.uk/bringing-goods-into-uk-personal-use/banned-and-restricted-goods">官方公告</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="入關文件"><a class="header" href="#入關文件">入關文件</a></h1>
+<h2 id="必備文件"><a class="header" href="#必備文件">必備文件</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+護照</li>
+<li><input disabled="" type="checkbox"/>
+Certificate of Offer</li>
+<li><input disabled="" type="checkbox"/>
+College offer letter</li>
+<li><input disabled="" type="checkbox"/>
+CAS （請下載成完整 PDF）</li>
+<li><input disabled="" type="checkbox"/>
+ATAS （如果就讀科系需要）</li>
+<li><input disabled="" type="checkbox"/>
+財力證明文件 （如銀行存款證明）</li>
+<li><input disabled="" type="checkbox"/>
+獎學金 offer letter（如有）</li>
+<li><input disabled="" type="checkbox"/>
+Pre-Sessional English course attendance certificate （若有）</li>
+<li><input disabled="" type="checkbox"/>
+住宿地址證明（學院或學校住宿組提供的 accommodation offer letter）</li>
+</ul>
+<h2 id="選備文件"><a class="header" href="#選備文件">選備文件</a></h2>
+<ul>
+<li><input disabled="" type="checkbox"/>
+前份學歷 official transcript</li>
+<li><input disabled="" type="checkbox"/>
+College student-college contract</li>
+<li><input disabled="" type="checkbox"/>
+College financial declaration</li>
+<li><input disabled="" type="checkbox"/>
+Accommodation college deposit receipt</li>
+<li><input disabled="" type="checkbox"/>
+IELTS 成績單</li>
+<li><input disabled="" type="checkbox"/>
+護照影本</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="赴英航班"><a class="header" href="#赴英航班">赴英航班</a></h1>
+<p>倫敦主要有兩個長途國際機場，分別是 Heathrow (LHR) 及 Gatwick (LGW) 從台灣出發的航班主要選擇如下：</p>
+<ul>
+<li>中華航空 CI61 從桃園機場 (TPE) 直飛 Heathrow (LHR)，飛行時間約為 14 小時。</li>
+<li>長榮航空 BR67 從桃園機場 (TPE) 直飛 Heathrow (LHR)，中停泰國曼谷，飛行時間約為 19 小時。</li>
+<li>阿聯酋航空 (EK) 亦有從桃園機場 (TPE) 經杜拜 (DXB) 轉機到達 Heathrow (LHR) 或 Gatwick (LGW) 的航班，總旅行時間較長，但每段航程較短較為舒適。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="前往牛津"><a class="header" href="#前往牛津">前往牛津</a></h1>
+<p>倫敦的兩個主要機場皆有 24 小時客運（the Airline Oxford）往返牛津，車上有提供插座、廁所及 Wi-Fi ，時刻表及訂票方式可以在<a href="https://www.theairlineoxford.co.uk/">官方網站</a>找到。</p>
+<ul>
+<li>從機場出發的車票有彈性條款，在訂位時間的前後 24 小時都可以使用，不需擔心航班延誤的問題。</li>
+<li>Heathrow (LHR) 機場第二與第三航廈的上車地點皆在 Central Bus Station，單程票價為 ￡25，車程約為 90 分鐘。</li>
+<li>Gatwick (LGW) 機場單程票價為 ￡28，車程約為 150 分鐘。</li>
+<li>牛津客運總站為 Gloucester Green 。通常會有黑色計程車排隊等候，可以選擇透過計程車抵達學院/宿舍報到。計程車通常可以是用信用卡付款，極少數只收現金，上車前請先與司機確認。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="要準備多少現金"><a class="header" href="#要準備多少現金">要準備多少現金</a></h1>
+<p>在前往英國之前，通常建議攜帶一些現金以應對初到英國時的開支，尤其是在尚未開立英國銀行帳戶的情況下。以下是一些有關現金準備和處理的建議：</p>
+<ul>
+<li>建議攜帶約兩週生活所需的現金量。這樣的現金量能夠滿足你初期的基本開支，如交通、餐飲、購物等。</li>
+<li>英國信用卡普及，絕大多數商店和餐廳都接受信用卡付款。
+<ul>
+<li>部分國內的信用卡可能需要在每筆交易後簽帳。</li>
+<li>極少數地方如小型商店、餐廳（尤其是中式餐廳和亞洲超市）或市場等可能仍然偏好現金支付。</li>
+</ul>
+</li>
+<li>安全建議
+<ul>
+<li>避免攜帶過多現金: 攜帶大量現金可能會增加遺失的風險，並且在入境時也可能引起不必要的麻煩，可以請親友在國內協助匯款。</li>
+<li>分開保管: 將現金和其他重要物品（如護照、信用卡）分開保管，減少遺失或被盜的風險。</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="如何在英國領取自己臺灣帳戶內的金錢"><a class="header" href="#如何在英國領取自己臺灣帳戶內的金錢">如何在英國領取自己臺灣帳戶內的金錢</a></h1>
+<p>若想確保在英國也可以領取自己臺灣帳戶的金錢，有以下方法提供。然而這些手續大部分都需要在離台之前有許多相關手續，建議及早準備。</p>
+<ol>
+<li>英國 ATM 跨國領取
+<ul>
+<li>在臺灣開啟外幣帳戶/臺幣帳戶，少部分臺灣的銀行開放以臺幣帳戶跨國領取英鎊，但多數臺灣的銀行僅接受以「臺幣帳戶」跨國領取英鎊。</li>
+<li>開啟臺灣之銀行卡片的跨國提款功能，並設置跨國提款密碼。</li>
+<li>需注意臺灣本地銀行手續費、英國 ATM 手續費、匯率等資訊。</li>
+</ul>
+</li>
+<li>臺灣戶頭現金轉入英國戶頭領取
+<ul>
+<li>在臺灣開啟銀行外幣帳戶。</li>
+<li>開立英國線上虛擬銀行（如 Revelut、Wise）。</li>
+<li>帳戶持有人（學生本人）到臺灣本地的銀行臨櫃設置其外幣帳戶的「跨國約定轉帳功能」，綁定英國線上虛擬銀行帳戶。</li>
+<li>將錢轉入虛擬銀行帳戶，即可以使用。</li>
+<li>需注意臺灣本地銀行手續費、每日換匯時間限制、英國 ATM 手續費、匯率等資訊。</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="如何支付學費"><a class="header" href="#如何支付學費">如何支付學費</a></h1>
+<ul>
+<li>繳費通知
+<ul>
+<li>大約在九月或十月，各學院會以電子郵件寄送繳費通知及收款銀行帳戶資訊。</li>
+<li>若想在離台前確認已學費繳交，可以先向學院申請提早繳費。</li>
+</ul>
+</li>
+<li>繳費方式
+<ul>
+<li>繳費方式可以選擇：
+<ul>
+<li>跨國電匯</li>
+<li>英鎊匯票</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>自費生繳費注意事項
+<ul>
+<li>確認受款人帳號/學院方收款銀行/資訊是否填寫正確。</li>
+<li>小撇步：建議可以先到銀行領取電匯手續填寫單「練寫」，確保表單上各欄位，皆知悉如何填寫。</li>
+<li>註明帳單號碼 (invoice number) 及繳款學生的資訊。</li>
+<li>如對詳細的繳費步驟有疑問，建議聯絡學院的相關人員確認後再繳交費用。</li>
+<li>繳交費用後
+<ul>
+<li>會依學院要求拍照/掃描回傳相關收據/證明（正本請妥善保管。</li>
+<li>建議可以主動寫信告知學院已繳費完成，協助確認帳款。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>公費留學生及獎學金生
+<ul>
+<li>公費留學生及獎學金生的費用將由學校內部對財務擔保者進行收款，轉帳手續不會經過學生。</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="銀行開戶"><a class="header" href="#銀行開戶">銀行開戶</a></h1>
+<p>英國的主要實體銀行 Barclays、HSBC 和 Lloyds，在牛津市中心都有分行。
+另外也可以考慮線上銀行如 Chase UK、Monzo、Revolut 和 Starling Bank 。
+校方也有提供銀行開戶的相關協助，請參考<a href="https://welcome.ox.ac.uk/opening-a-bank-account#collapse1758466">學校公告</a>。</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">銀行</th><th style="text-align: left">Barclays</th><th style="text-align: left">HSBC</th><th style="text-align: left">Lloyds</th></tr></thead><tbody>
+<tr><td style="text-align: left">聯絡電話</td><td style="text-align: left">03457345345 （轉Oxford分行）</td><td style="text-align: left">03457404404（轉Cornmarket St.分行）</td><td style="text-align: left">08453000000（轉Oxford分行）</td></tr>
+<tr><td style="text-align: left">市中心分行地址</td><td style="text-align: left">54 Cornmarket St., OX13HB</td><td style="text-align: left">65 Cornmarket St., OX13HY</td><td style="text-align: left">1 High St. OX14AA</td></tr>
+</tbody></table>
+</div>
+<h2 id="開戶所需文件"><a class="header" href="#開戶所需文件">開戶所需文件</a></h2>
+<p>各銀行所需文件略有不同，但通常需要以下文件:</p>
+<ul>
+<li>有效護照</li>
+<li>BRP</li>
+<li>學生註冊證明（需有學院簽名與蓋印章）</li>
+</ul>
+<h2 id="一些建議"><a class="header" href="#一些建議">一些建議</a></h2>
+<ul>
+<li>學校的新生博覽會上常會有銀行進駐協助辦理開戶，可善加利用。</li>
+<li>開戶時請務必注意是否有額外的收費，一些銀行可能會有帳戶維護費或其他隱藏費用，以及是否提供 debit card ，學生通常需要這張卡來進行日常交易。另外利率、網路銀行服務和跨行提款費用都是考量因素。</li>
+<li>英國跨行轉賬通常是不需要手續費的。</li>
+<li>若是經常至英國以外國家旅行或開會，可以考慮辦 Monzo 或 Revolut 等線上銀行，主要特色為享有海外與外幣消費免手續費、自動記帳、即時換匯與快速拆帳等功能。
+這兩家銀行沒有實體分行，但都受英國金融行為監管局 FCA (Financial Conduct Authority) 與審慎監管司 PRA (Prudential Regulation Authority) 監管，請自行衡量風險。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="手機門號與行動網路"><a class="header" href="#手機門號與行動網路">手機門號與行動網路</a></h1>
+<h2 id="英國常見電信方案"><a class="header" href="#英國常見電信方案">英國常見電信方案</a></h2>
+<ul>
+<li>Pay-as-you-go：類似台灣的預付卡，購買後可根據需要充值額度，無合約負擔，通常在機場、手機行或雜貨店可以購買。</li>
+<li>SIM Only / Pay Monthly：提供 1 個月或 12 個月的合約，每月付費。合約結束後可選擇續約或更換方案。</li>
+<li>Contract：類似台灣的月費制，通常簽約 18 或 24 個月，月費固定，可能包含手機優惠。</li>
+</ul>
+<h2 id="英國主要電信公司"><a class="header" href="#英國主要電信公司">英國主要電信公司：</a></h2>
+<ul>
+<li><a href="https://www.o2.co.uk">O2</a></li>
+<li><a href="https://www.vodafone.co.uk">Vodafone</a></li>
+<li><a href="http://www.three.co.uk">3 (THREE)</a></li>
+<li><a href="https://ee.co.uk">EE</a></li>
+<li><a href="https://www.giffgaff.com">Giffgaff</a></li>
+<li><a href="https://www.lebara.com">Lebara</a></li>
+</ul>
+<h2 id="一些建議-1"><a class="header" href="#一些建議-1">一些建議</a></h2>
+<ul>
+<li>要注意某些公司提供的免費手機只能使用其自家 SIM 卡，換其他 SIM 卡可能無法使用。</li>
+<li>在考慮各間電信公司時，可以考慮各電信公司地區覆蓋率、是否有綁定合約、是否有提供免費國際漫遊。</li>
+<li>英國境內手機門號都可以申請攜碼轉換，並且不需要額外的費用。</li>
+<li>在新生博覽會上有些電信公司也會發送第一個月免費試用的 SIM 卡。</li>
+<li>可選擇先行使用申請簽證時贈送的 SIM 卡，預先申辦不同英國帳號，到英國後再視需要，申請換家。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="學校-it-服務"><a class="header" href="#學校-it-服務">學校 IT 服務</a></h1>
+<h2 id="single-sign-on"><a class="header" href="#single-sign-on">Single Sign-On</a></h2>
+<p>通常在抵達牛津前，會收到一組帳號密碼，帳號格式為 <code>abcd1234</code> ，<code>abcd</code> 通常為學院的簡稱。
+該帳號用於登入學校的主要服務系統，包括成績報告、圖書館借閱、電子信箱和無線網路等。</p>
+<ul>
+<li>該系統強制使用雙重要素驗證 (2FA) ，必須在手機上下載並綁定 Microsoft Authenticator ，之後每次登錄都必須在手機上進行驗證。</li>
+</ul>
+<h2 id="電子信箱"><a class="header" href="#電子信箱">電子信箱</a></h2>
+<p>通常一個人會有三個不同的電子信箱地址，但這些地址是互通的，他們共用同一個收件夾。</p>
+<ul>
+<li><code>[SSO username]@OX.AC.UK</code></li>
+<li><code>[name]@[college].ox.ac.uk</code></li>
+<li><code>[name]@[dept].ox.ac.uk</code></li>
+</ul>
+<h2 id="校內無線網路連接"><a class="header" href="#校內無線網路連接">校內無線網路連接</a></h2>
+<p>校內主要的無線網路服務為 eduroam ，在連接前必須設定額外的密碼，可參考<a href="https://help.it.ox.ac.uk/how-to-connect-to-eduroam">這裡</a>了解更多使用方式。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="註冊"><a class="header" href="#註冊">註冊</a></h1>
+<p>關於學生註冊證明的申請，為常見碰到問題，這邊大致整理成以下幾點步驟:</p>
+<ol>
+<li>當你接受牛津 Offer 後，學校IT Services會寄信給你一個 Single Sign-On (SSO) 登入資訊。此為往後使用牛津任何網路服務的登入資料。</li>
+<li>通常在每年九月初學校的學生訊組會寄信要求你完成學校線上登記（<a href="https://www.ox.ac.uk/students/registration">Registration</a>）的程序，建議在抵達牛津前儘早完成。</li>
+<li>待學院完成確認後，便可至學校網站 <a href="https://www.ox.ac.uk/students/selfservice?wssl=1">Student Self Service</a> 登入，印出自己的註冊證明，要求學院幫你簽名與蓋印。
+<ul>
+<li>註冊證明上必須有完整的地址與郵遞區號供銀行開戶使用（有些學院會要求住在學院宿舍但非學院本址，也就是住宿 college off-site accommodation 的學生填寫本址的地址作為聯繫資料及開戶，建議和學院工作人員確認）。</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="生活地圖"><a class="header" href="#生活地圖">生活地圖</a></h1>
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1l7RHGDFf_bikqU0vyXcfAdFdn4qHrSU&ehbc=2E312F" width="640" height="480"></iframe>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="購物"><a class="header" href="#購物">購物</a></h1>
+<ul>
+<li>英國超市價格: Marks &amp; Spencer\ Waitrose &gt; Sainsbury\ Tesco\ Co-op &gt; Alid\ Lidl</li>
+<li>大型購物中心: Westgate、Templar Square、Garsington Road</li>
+<li>專業與品牌商店: Bicester、Village、Seacourt Tower</li>
+<li>折扣與特價店: Primark、TK Maxx、Poundland</li>
+<li>網購與學生特惠 APP: Amazon、Student Beans、UNiDAYS
+<ul>
+<li>使用 <code>.ac.uk</code> 之電子信箱註冊 Amazon 可以獲得六個月免費 <a href="https://www.amazon.co.uk/Amazon-Student-Free-One-Day-Delivery/b?ie=UTF8&amp;node=2973324031">Amazon Student Prime</a>，
+可使用不同的學校電子郵件地址，取得一年半免費 Amazon Student Prime。</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="公車"><a class="header" href="#公車">公車</a></h1>
+<ol>
+<li>
+<p>主要公車公司</p>
+<ul>
+<li>Stagecoach、Thames Travel、Arriva、 Oxford Bus Company
+<ul>
+<li>Cityzone 由 Oxford Bus Company 與 Thames Travel 負責。</li>
+<li>Smartzone由四家公司共同負責。</li>
+</ul>
+</li>
+<li>牛津公車路線以 Zone 區分，分為Cityzone &amp; Smartzone，購買月票時請注意。</li>
+</ul>
+</li>
+<li>
+<p>公車票價及購票方式</p>
+<ul>
+<li>購票方式：上車購票（刷卡/投幣）或各公司 App（各家公司擁有自己的月票與 App 票種，公司間亦有複雜的合作關係，請自行謹慎留意票種及可乘搭的範圍）。</li>
+<li>上車前請告知司機你要抵達的站牌（地名）。</li>
+<li>票價參考：單程票 ￡2/ 當日來回票約 ￡5。</li>
+<li>長期套票：一日票、週票、四週票、十三週票等詳情上官網查詢。</li>
+</ul>
+</li>
+<li>
+<p>特殊情況及禮儀</p>
+<ul>
+<li>換司機：
+<ul>
+<li>市中心站牌可能換司機，會停較久且熄火，不用驚慌。</li>
+<li>讓接班司機先上車，等示意後再上車。</li>
+</ul>
+</li>
+<li>上車隊伍：
+<ul>
+<li>英國人在公車即將進站時才形成隊伍，通常不會有固定隊伍。</li>
+<li>觀察先來後到順序，彼此禮讓。</li>
+<li>上車前禮讓車內旅客下車。</li>
+</ul>
+</li>
+<li>上層空間請勿站立</li>
+</ul>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="腳踏車"><a class="header" href="#腳踏車">腳踏車</a></h1>
+<h2 id="購買腳踏車"><a class="header" href="#購買腳踏車">購買腳踏車</a></h2>
+<ul>
+<li>價格範圍
+<ul>
+<li>100 – 200 英鎊起跳（新車）</li>
+<li>50 – 150 英鎊（二手車）</li>
+</ul>
+</li>
+<li>購買地點
+<ul>
+<li>Cowley：Cycle King、Cycloanalysts、the Oxford Bicycle Company和BeeLine Bicycle（都在Cowley Road）。</li>
+<li>市中心：Bike Zone（St Michael Street）。</li>
+<li>Jericho：Bainton Bikes（Walton Street）。</li>
+<li>Summertown：Summertown Cycles（Banbury Road）。</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>較推薦 Cowley 店面購買，新車價格較合理，相較其他店面也有更多二手車。</li>
+<li>腳踏車跟用具則可以至迪卡儂選購，需要往返Headington建議要買多變速的車。</li>
+<li>二手車購買可以至 Facebook 牛津二手群組、部分學院（若對於腳踏車較不熟悉，建議到學院或是二手店家仔細當面確認車況品質，減少後續維修開銷）。</li>
+<li>簡單修車（如：調整座椅、落鏈、煞車線太鬆）通常可以去車行免費修，再自行詢問各車行。</li>
+</ul>
+<h2 id="牛津騎腳踏車指南"><a class="header" href="#牛津騎腳踏車指南">牛津騎腳踏車指南</a></h2>
+<ul>
+<li>靠左騎行，與汽機車一樣。</li>
+<li>道路左側通常有腳踏車道。</li>
+<li>禁止在行人道上騎行。</li>
+</ul>
+<h2 id="安全建議"><a class="header" href="#安全建議">安全建議</a></h2>
+<ul>
+<li>在市區騎車時常需要在汽機車之間穿行。</li>
+<li>建議配戴安全帽以保護自身安全。</li>
+<li>夜間騎車必須配有車燈（前燈白色，後燈紅色），否則會被警察罰款或登記警告。</li>
+<li>左/右轉彎前，將左/右手由下往上平舉45-90度（如右圖），知會後方來車。</li>
+</ul>
+<h2 id="防盜措施"><a class="header" href="#防盜措施">防盜措施</a></h2>
+<ul>
+<li>牛津的腳踏車偷竊時有所聞，建議使用品質較好的車鎖（推薦使用D-lock）。</li>
+<li>停車時盡量將車鎖在柱子或欄杆上。</li>
+<li>日常停車時，避免長時間停在不安全的地方（如市中心的Tesco附近）。</li>
+<li>停車後記得將車燈取下，以免失竊。</li>
+<li>可考慮透過學校<a href="https://travel.admin.ox.ac.uk/bike/security">安全服務</a>註冊腳踏車，取得 QR Code，以利失竊時協尋。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="計程車"><a class="header" href="#計程車">計程車</a></h1>
+<ul>
+<li>
+<p>路邊攔車（黑色計程車）</p>
+<ul>
+<li>主要上車地點：Carfax tower (夜間）、Gloucester Green、train station</li>
+<li>統一樣式，價格稍貴。</li>
+<li>支付方式：現金或刷卡。</li>
+</ul>
+</li>
+<li>
+<p>使用 APP 叫車</p>
+<ul>
+<li>主要公司：001、Royal Cars、FREE NOW</li>
+<li>特點：
+<ul>
+<li>無固定顏色，車體標示公司商標</li>
+<li>可以使用專屬 APP 叫車或預定</li>
+<li>選擇車種並顯示預估金額</li>
+<li>付款方式：綁定信用卡或現金</li>
+<li>APP 顯示車輛和司機資訊及即時位置</li>
+<li>司機接近時可能會打電話，注意手機收訊</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="長程交通工具"><a class="header" href="#長程交通工具">長程交通工具</a></h1>
+<h2 id="客運"><a class="header" href="#客運">客運</a></h2>
+<ul>
+<li>英國客運發達，主要公司為 National Express 和 Megabus。</li>
+<li>禁止帶熱食上車，但一般熱飲可帶。</li>
+<li>客運進城的終點站通常設在總站 Gloucester Green。</li>
+</ul>
+<h2 id="火車"><a class="header" href="#火車">火車</a></h2>
+<ul>
+<li>牛津主要火車站為 Oxford (OXF)。</li>
+<li>常搭火車可考慮購買 <a href="https://www.railcard.co.uk/">railcard</a>，根據年齡分版本，享有不同的折扣。</li>
+<li><a href="https://www.thetrainline.com/">Trainline APP</a>：購票、追蹤火車延誤及綁定 Railcard。</li>
+</ul>
+<h2 id="往返倫敦"><a class="header" href="#往返倫敦">往返倫敦</a></h2>
+<ul>
+<li>可搭乘 <a href="https://www.oxfordtube.com/">Oxford tube</a> 或是火車。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="住"><a class="header" href="#住">住</a></h1>
+<p>在牛津，住宿選擇主要有學院宿舍、學校宿舍和校外租屋三種。</p>
+<h2 id="學院宿舍-college-accommodation"><a class="header" href="#學院宿舍-college-accommodation">學院宿舍 (College Accommodation)</a></h2>
+<ul>
+<li>學院會主動通知床位狀況，一些學院僅提供本址（main site）宿舍，有些學院提供市區或其他地區宿舍。</li>
+<li>查詢方式：直接向學院住宿組諮詢，查詢學院網站，若宿舍滿，可以試著聯繫其他學院。</li>
+<li>注意事項：確認是否需要在寒假或暑假搬出。</li>
+<li>價格範圍：£600 – £900 每月，通常包括水電網路等費用。</li>
+<li>重要叮嚀：火警演習可能會不定時進行，即便在睡夢中也需立即響應。演習時，若不參與，可能會遭受處罰。有時一個人未參與演習就會整棟重新來過直到每個人都有參與。</li>
+</ul>
+<h2 id="學校宿舍-university-accommodation"><a class="header" href="#學校宿舍-university-accommodation">學校宿舍 (University Accommodation)</a></h2>
+<ul>
+<li>由牛津大學直接管理，不屬於各學院，需向 University Graduate Accommodation 申請抽籤。</li>
+<li>主要對象為碩士和博士研究生。</li>
+<li>約有十五處宿舍可供選擇，通常比學院宿舍便宜。</li>
+<li>每年可以登記抽籤，新生申請時會有優先排序，競爭激烈，中籤率時常會等後補，候補一但到號就需決定放棄/保留。</li>
+<li>位於 Banbury Road 上的 <a href="https://nooc.org.uk/">North Oxford Overseas Centre (NOOC)</a> 提供一年左右的短期住宿，適合第一年找不到住宿的海外學生，短期訪問學者或交換學生也可以申請。此宿舍也會定期舉辦交誼活動。</li>
+</ul>
+<h2 id="校外租屋"><a class="header" href="#校外租屋">校外租屋</a></h2>
+<ul>
+<li>在外租屋價格不一，愈近市中心愈貴，</li>
+<li>一些注意事項
+<ul>
+<li>Council tax： 在你住進租屋處後 2 – 3 週會收到 Council 來信，租屋人催繳稅。但是學生是不用繳 Council tax 的，所以細節省略，只需要你去在學校網站上把在學證明（Student Statement）印下來，到學院蓋章寄回給 Council 就可以了。</li>
+<li>Utility Bills: ：租金是否包含水費、電費、瓦斯費等等，務必與房束諮詢清楚。
+另外，這裡不像台灣只有一家電力公司與水利公司，英國各家公司計費不同，又依據地區不同有不同價位。可以上網比較費率後，再決定使用哪一家的方案（參考網站：<a href="https://www.dailyinfo.co.uk/">Daily Info</a>）。</li>
+</ul>
+<ul>
+<li>Deposit：房租是否需要另付訂金，和訂金返還的規定。</li>
+<li>治安：可以於白天、晚上去有意向的租屋處附近晃晃，看街道安全與寧靜程度是否合適。在牛津，一般來說 Cowley Road 是治安相對較差的區域。</li>
+<li>交通：建議考量往返工作場所或上課系館是否方便，以及是否需要購買交通工具（如：腳踏車）；若沒有購買交通工具的打算，則可以考量大眾交通工具的方便性。</li>
+</ul>
+</li>
+<li>學校的 Accommodation Office 提供了一些在外租屋的資訊。</li>
+<li>一些牛津常見的租屋網: <a href="https://www.rightmove.co.uk/">Rightmove</a>、<a href="https://www.zoopla.co.uk/">Zoopla</a>、<a href="https://www.spareroom.co.uk">Spareroom</a>、<a href="https://www.dailyinfo.co.uk/oxford-accommodation">Daily Info</a>、<a href="https://www.facebook.com/groups/160632823948859/">OxGradHousing</a>。</li>
+</ul>
+<h2 id="英國常見宿舍房型"><a class="header" href="#英國常見宿舍房型">英國常見宿舍房型</a></h2>
+<ul>
+<li>Standard/ Study/ Shared/ Single Room
+<ul>
+<li>配置：擁有臥室、書桌、衣櫃、椅子。</li>
+<li>共用設施：與他人共用廚房與衛浴。</li>
+<li>面積：約 10 平方公尺。</li>
+<li>價格：通常較便宜。</li>
+</ul>
+</li>
+<li>En-suite
+<ul>
+<li>配置：臥室內有獨立衛浴（少數有浴缸），其他與 Standard Room 相似。</li>
+<li>共用設施：與 4–6 人共用廚房。</li>
+<li>面積：約 13-15 平方公尺。</li>
+<li>價格：較 Standard Room 稍高。</li>
+</ul>
+</li>
+<li>Premium En-suite/ Twin Room
+<ul>
+<li>配置：面積更大，適合雙人入住，配有兩張書桌、兩把椅子及兩床。</li>
+<li>共用設施：通常與他人共用廚房。</li>
+</ul>
+</li>
+<li>Studio
+<ul>
+<li>配置：擁有獨立衛浴和獨立廚房，通常有客廳、臥室和廚房在同一空間內。</li>
+<li>面積：最小約 20 平方公尺。</li>
+</ul>
+</li>
+<li>One Bedroom Flat
+<ul>
+<li>配置：擁有客廳、獨立衛浴和獨立廚房，臥室與客廳分開。</li>
+<li>面積：通常較 Studio 大。</li>
+</ul>
+</li>
+<li>Flat
+<ul>
+<li>配置：由一間一間的 Standard Room 或 En-suite 組成的公寓。</li>
+</ul>
+</li>
+<li>House
+<ul>
+<li>配置：獨立樓房，一般適合家庭或三五好友一起居住。</li>
+</ul>
+</li>
+</ul>
+<h2 id="一些建議-2"><a class="header" href="#一些建議-2">一些建議</a></h2>
+<p>如果是牛津新生，學院若能提供住宿，建議第一年可以住學院，除了可以省去找房子的麻煩，也因為學院通常會有餐廳，吃飯也會相對方便許多。另外，牛津很多的社交活動是以學院為單位的，學院內部常常舉辦各類活動，新生可以藉此認識許多同學院的朋友，快速拓展人際關係。只是學院內部住宿多沒有電梯，還需留意。另外，任何的註冊資訊若需要填寫地址，一律建議寄到學院，而非居住地址。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="牛津分區"><a class="header" href="#牛津分區">牛津分區</a></h1>
+<p><img src="https://www.dailyinfo.co.uk/sheet/maps/2017/front-cover-full.png" alt="dist" /></p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="學期劃分"><a class="header" href="#學期劃分">學期劃分</a></h1>
+<p>和臺灣的制度不同，牛津將一學年劃分為三個學期，每個學期八周，以四月的復活節及十二月的聖誕節做為切分點，
+這三個學期分別稱為 Michaelmas Term (Oct – Dec)、 Hilary Term (Jan – Mar) 和 Trinity Term (Apr – Jun)。
+在學期間通常以 week X 稱呼而較少說日期，例如 Tuesday of week 2。而 week 0 表示某學期開始的前一週。</p>
+<p>確切的起訖日期可以在學校<a href="https://www.ox.ac.uk/about/facts-and-figures/dates-of-term">官網</a>找到，下一學年的時程摘錄如下。</p>
+<div class="table-wrapper"><table><thead><tr><th>Term</th><th>From</th><th>To</th></tr></thead><tbody>
+<tr><td>Michaelmas 2024</td><td>Sunday 13 October</td><td>Saturday 7 December</td></tr>
+<tr><td>Hilary 2025</td><td>Sunday 19 January</td><td>Saturday 15 March</td></tr>
+<tr><td>Trinity 2025</td><td>Sunday 27 April</td><td>Saturday 21 June</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="服裝"><a class="header" href="#服裝">服裝</a></h1>
+<h2 id="sub-fusc"><a class="header" href="#sub-fusc">Sub-fusc</a></h2>
+<ul>
+<li>Sub-fusc 是牛津大學的全套學術袍，在許多正式的場合（例如 Matriculation、formal dinner、exams、DPhil viva 等）都必須穿著 sub-fusc。
+<ul>
+<li>牛津的學術袍的樣式與劍橋的不同。此外，大學部的學術袍是短版的，而研究生是及膝長版的，千萬不要買錯。</li>
+<li>全套的 sub-fusc 包含袍子、帽子和領結（男）／緞帶（女），必須在 Matriculation 前自行準備。在 high street 上的 Shepherd &amp; Woodward 和 turl street 上的 Walter 都有販售，價格約為 ￡45。而在 Oxfam / 各個學院也有機會可以買到二手的。</li>
+</ul>
+</li>
+<li>在最正式的場合 (Matriculation），男生需搭配黑西裝、白襯衫、黑西裝褲、黑襪、黑鞋。女生則需穿著白襯衫、黑裙（褲）、黑襪、黑鞋。傳統上男生會搭配白領結，女生則搭配黑緞帶，但現今每人皆可以選擇黑領結/白領結/黑緞帶/黑領帶。詳細規範可以參考<a href="https://www.ox.ac.uk/students/academic/dress?wssl=1">學校官方公告</a>。</li>
+</ul>
+<h2 id="dress-code"><a class="header" href="#dress-code">Dress code</a></h2>
+<p>一共有四種正式等級，最正式的是 white tie，再來依序是 black tie、cocktail 及 smart casual。</p>
+<ul>
+<li>White tie: 顧名思義就是男生是全套西裝皮鞋且必須要繫白色領結（不是領帶），還需配上燕尾服（tailcoat），女生則是要穿裙長及地的晚禮服並佩戴遮住手肘的袖套。通常僅有舞會（ball）會採用 White tie的服裝規定。</li>
+<li>Black tie: 男生也一樣要穿全套西裝，但需改繫黑色領結（不是領帶），女生的禮服裙長可以不及地，但最好要過膝蓋。</li>
+<li>Cocktail: 通常指女生禮服的裙長可以只到膝上，男生基本上還是西裝為主但不一定要有領帶或領結。</li>
+<li>Smart casual: 是最常見的dress code，大部分的 formal dinner 都有這個服裝要求，通常男生會直接穿西裝（至少上半身要穿著襯衫），女生的話則有很多種選擇，襯衫、小洋裝、西裝外套等等都可以。</li>
+</ul>
+<h2 id="一些建議-3"><a class="header" href="#一些建議-3">一些建議</a></h2>
+<ul>
+<li>除了white tie（建議租借整套），其他的dress code都滿彈性的，尤其是smart casual有很多種穿法。</li>
+<li>建議男同學若有自己的西裝的話，不妨直接帶來英國，入學典禮一定會用到，可省去一筆花費，而女同學若有禮服或小洋裝也可以先帶幾件過來，因為通常在開學的第一週，每個學院都有專門辦給新生的 formal dinner，先準備即可免去開學前買晚禮服的壓力。</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="matriculation"><a class="header" href="#matriculation">Matriculation</a></h1>
+<p>Matriculation 是牛津的入學典禮，以學院為單位，全體新生強制參加。一生只能參加一次，是象徵正式成為牛津學生的儀式。
+通常在 Michaelmas term 第一週的週六舉行。</p>
+<p>所有學生必須穿著 Sub-fusc ，並且Matriculation 是要求最嚴格的場合之一，學院都會嚴格檢查服裝是否符合規定。</p>
+<p>流程通常是先在學院集合拍團體照和個人照，然後，由院長或 fellow 帶隊進入 Sheldonian Theatre，參加入學典禮。
+典禮的開頭與結尾會以拉丁文宣讀，整個流程大概會花上半天的時間。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="formal-dinner"><a class="header" href="#formal-dinner">Formal Dinner</a></h1>
+<p>學期間每個學院會有各自的 formal dinner (通常簡稱 formal)，是牛津重要的傳統，用餐時間通常介於七點至九點間。
+Formal 的頻率、價錢、餐點品質和服裝要求等因學院而有巨大的差異。
+有些學院還會有 black tie formal 或是 guest night 等更正式的 formal。
+通常在 Michaelmas term ，學院會舉辦一場專給新生的免費 formal。</p>
+<p>Formal 一般來說是包含前菜、主菜和甜點的三道形式，有些時候會有 pre-drink 和佐餐的紅白酒，在一些學院餐後還有咖啡、茶和巧克力，價格約在 £8 到 £30 之間。
+服裝通常會要求至少 smart casual ，而該學院的學生通常還必須著 gown。</p>
+<p>通常 formal 可以邀請賓客參加，而定位的方式和賓客的價錢因學院而異。有時候還有主題式 formal，例如 burns night、christmas 或是 lunar new year等。</p>
+<h2 id="一些名詞"><a class="header" href="#一些名詞">一些名詞</a></h2>
+<ul>
+<li>
+<p>High Table: 大部分學院在 dining hall 的最前方台階上會有一排橫擺的長桌，由於比下方的餐桌都高，所以被稱作 high table。通常是 fellow 或是供被 fellow 邀請的學生或外賓的座位。在一般學生都入座完畢後，high table 的賓客才會進入 dinning hall。在他們入場時，全體用餐者必須起立並保持肅靜。用餐完畢後，通常會敲槌，這時要再起立一次，等 high table 的賓客都離開後，才能再坐下或離開餐廳。每個學院於formal dinner的禮儀規定不太一樣，有些學院為了減低階級區分的風氣，沒有設置 high table。</p>
+</li>
+<li>
+<p>Grace: Formal dinner 用餐前的謝飯禱告詞，通常是以拉丁文朗讀。在 high table 的賓客入場後，由一位學生代表或院長來親自禱告，禱告完大家才能坐下，也才會開始上菜。有時後用餐完畢後，也會有一段 grace。Grace 的長度和內容因學院而異，最長的 grace 在 university college（大約一分鐘），短的 grace 就只有一句話。</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="更多名詞解釋"><a class="header" href="#更多名詞解釋">更多名詞解釋</a></h1>
+<h2 id="關於學校"><a class="header" href="#關於學校">關於學校</a></h2>
+<ul>
+<li>
+<p>Bodleian Library: 是牛津大學的圖書館群，藏書為全英國第二多，僅次於大英圖書館。牛津有非常多圖書館，都算是 Bodleian Library 的分支，像是學院和系所圖書館、Radcliffe Camera、Weston Library 及Radcliffe Science Library 等。
+學生可以依據自己的需求，來找尋適合的圖書資源。牛津大學所有的圖書資源都可以使用<a href="http://solo.bodleian.ox.ac.uk/">這個網站</a>查詢。</p>
+</li>
+<li>
+<p>Bod Card: 牛津大學的學生證，是進出系館、學院、各大圖書館、在學生餐廳付費、甚至進自己的房間所需使用的卡。因需使用它來進入 Bodleian Library，所以被稱做 Bod Card。如果遺失的話，請先跟學院掛失，補辦費用為 £15，完整流程可以參考學校<a href="https://estates.admin.ox.ac.uk/lost-cards">公告</a>。</p>
+</li>
+<li>
+<p>Sheldonian Theatre: 是 Matriculation 和畢業典禮的場地。也經常供各式音樂會演出使用。</p>
+</li>
+<li>
+<p>Examination School: 大學部和碩士生考試的場所，位在 high street 上。大部分科系的學生都要到這裡來應考，考試時的服儀規定跟 Matriculation 一樣是最高標準，必須穿著完整的 sub-fusc，可能還需配戴特殊的胸花。違反服儀規定之學生可能會被禁止入場參加考試。</p>
+</li>
+<li>
+<p>Carnations: 大學部考試時，胸前要別的胸花（花朵的顏色將根據考科或考試日程而有所不同）。通常考第一個科目時會配戴白色康乃馨，考最後一個科目時會配戴紅色康乃馨，其餘考科時則配戴粉色康乃馨。</p>
+</li>
+<li>
+<p>Fresher’s Fair: 每年10月初在 Examination school 所舉辦的新生社團聯展，通常有兩天。基本上，除了社團幹部之外，只有新生才能入場，學院會事先把手環放在每個新生的 pigeonhole 裡， 要佩戴手環才能入場。且通常 JCR 或 MCR 會安排一個時間帶同學院的新生一起過去，但也可以自行前往。</p>
+</li>
+</ul>
+<h2 id="關於學院"><a class="header" href="#關於學院">關於學院</a></h2>
+<ul>
+<li>
+<p>Informal Dinner: 非 formal dinner 的學院晚餐，大部分學院的地點一樣是在 dining hall，但其時段通常會在 formal dinner 之前。</p>
+</li>
+<li>
+<p>Buttery: Dining hall 內的取餐和付款處。部分學院的 buttery 還有另外賣三明治、飲料、牛奶、水果、沙拉吧等各種零食。有些學院還有 buttery 以外的咖啡廳及小吃部。</p>
+</li>
+<li>
+<p>Battels: 學院的記帳系統，通常用以紀錄有關 formal dinner、平日餐點、住宿費或其他雜項的錢。每學期初，學院會寄明細給每位學生，並註明繳費期限，通常可接受線上刷卡付清，但記得要按時繳費，否則還得支付額外遲交費。</p>
+</li>
+<li>
+<p>Lodge: 學院的警衛室。位在各學院的正門口，通常是 24 小時有人看守（聖誕節期間可能會關閉），負責管理鑰匙、人員進出、學院安全等等各式雜事。</p>
+</li>
+<li>
+<p>Porter: 學院警衛室的駐守人員，他們是學院的第一線人員和訊息傳遞站。基本上，如果在學院內遇到生活上的任何疑難雜症都可以找 porter，包括房間需要維修、 洗澡沒熱水、火警鈴的解除、忘記帶房門鑰匙等等。</p>
+</li>
+<li>
+<p>Pigeonhole: 經常簡稱 pidge，指位在學院（系館）內的個人信箱。即使你不住在學院裡面，每個學生在學院內（lodge附近），都會有一個個人信箱。因此，你的永久性地址可以填學院地址，但是需注意收件人一定要你的英文全名（同註冊資訊），否則寄不到。學院內信也是由 porter 負責簽收和管理。</p>
+</li>
+<li>
+<p>Common Rooms: 交誼廳，通常分為以下三種。JCR (Junior Common Room) 大學部學生會或交誼廳；MCR (Middle Common Room) 碩博研究生的學生會或交誼廳；SCR (Senior Common Room) fellow 和教職員的交誼廳，通常提供食物會比 JCR、MCR 豐富。通常學生和教職員只能進入和使用自己所屬的交誼廳，交誼廳內通常會有廚房、冰箱、電視、電動、桌遊等等之免費設施。部分學院不區分成員的身份會只有一個共同的 CR。</p>
+</li>
+<li>
+<p>Scout: 學院的清潔人員。每個學生宿舍通常會有 scout 定期清掃廚房等公共空間。也有些學生宿舍的 scout 會每周一次進到你的房間，清理垃圾、洗手台、地板等。</p>
+</li>
+<li>
+<p>BOP: Big Organised Party，學院所舉辦的小舞會（派對），通常辦在交誼廳裡，並且會有特定主題。服裝方面，可以穿著 smart casual。BOP 一學期會舉辦一次。</p>
+</li>
+<li>
+<p>Ball: 學院所舉辦的（年度或幾年度一次）大型舞會。可以自由參加其他學院的 Ball，票價通常都要 £100 起跳。服裝規定一般是 white tie 或 black tie。一般都辦在學院裡（從晚上到凌晨，甚至通宵）。有時還有煙火、碰碰車等遊樂設施，或者歌手／樂團的演出。</p>
+</li>
+</ul>
+<h2 id="關於課程"><a class="header" href="#關於課程">關於課程</a></h2>
+<ul>
+<li>
+<p>Colloquium: 相當於Seminar。</p>
+</li>
+<li>
+<p>Lecture: 大班制教學的課，可對應到台灣或美國的 class。通常是整個年級一起上，牛津很多 lecture 只有一個小時就下課，每堂課的時長相對較短。</p>
+</li>
+<li>
+<p>Tutorial: 牛津大學部獨有的一對一或小班制教學課程。學期間，大學部學生會有很多 tutorial 課程，地點可能在系上或在學院內上課。Tutor 可能是教授也可能是博士生。擔任 tutor 可以賺取對應的薪資，詳情可諮詢學院或系上。</p>
+</li>
+<li>
+<p>Demonstrator/Tutor: 研究生比較常聽到的名詞，兩種都是助教的種類。Demonstrator 多半指的是隨堂助教，在課堂上（通常是實習課或野外課）協助老師教學，及解答一些學生的問題等。Tutor 則是完全要自己上課，通常採小班制，不會有老師在場，要自己全程授課或解題。兩者的時薪也不同。</p>
+</li>
+<li>
+<p>DPhil/MPhil: Doctor/Master of Philosophy，牛津對於博士／研究型碩士學位的稱呼。</p>
+</li>
+</ul>
+<h2 id="其他"><a class="header" href="#其他">其他</a></h2>
+<ul>
+<li>
+<p>Varsity: 每年牛津跟劍橋在 Hilary Term 所舉辦的運動比賽。有各式各樣的運動競技項目，兩邊學校會派出校隊（Squad）參賽，也是兩邊居民非常重視的年度活動。比賽地點就在牛津或劍橋（不會全部項目都在同個學校比），最熱門的項目牛劍賽艇（Rowing）對抗賽每年四月會在倫敦的泰晤士河上舉行。</p>
+</li>
+<li>
+<p>Blue: 校隊成員中的代表 first team 參加過 varsity，或曾在英國大學運動競技聯盟（BUCS）比賽過的選手。每種運動項目對於 blue 的入選資格不太一樣。學校會頒發證書給符合 blue 資格的學生，而且該學生將可購買鑲有Blue徽章和特製紋路的西裝外套等服飾和配件。Blue 是牛津大學體育類的榮譽指標。</p>
+</li>
+<li>
+<p>Half-Blue: 為校隊成員但成績、表現或參賽頻率未達到 blue 標準者。有時可以獲頒 half-Blue 的殊榮。其入選資格規定，也是因運動項目而異。</p>
+</li>
+</ul>
+<!--+ Clubbing: 上夜店。英國的夜店不算是不良場所，尤其在牛津城裡，大部分上夜店的都是大學生，相對單純。英國大學生去夜店就像台灣人去KTV一樣稀鬆平常，是滿多人喜歡的娛樂活動。
+
++ Trashing: 牛津大學的傳統之一，於 Trinity Term，在大學部或碩士生考完最後一科後，會有人當街對你丟彩帶，噴香檳、砸刮鬍泡或奶油等等。固定發生的地點是在 nerton street，校方還會部分封街，讓學生更自由地 trashing。
+
++ Tab: 暗指劍橋學生。the other place/school 或 the dark side 則是暗指劍橋大學。
+
+
++ Kebab: 是一種中東料理，但又可以指晚上才會開賣的移動餐車。此類食物包含沙威瑪、捲餅、漢堡、薯條、炸雞等等，有些還會有披薩。在High Street或市中心其他地方有很多家在賣，從晚上七點開始營業到凌晨，讓有夜讀習慣的同學可以有宵夜吃。價格一般不高（4 – 6英磅），且份量很大。-->
+<div style="break-before: page; page-break-before: always;"></div><h2 id="線上化第一版"><a class="header" href="#線上化第一版">線上化第一版</a></h2>
+<ul>
+<li>Editor: Clara, Henry Hung &amp; Chia-Hsuan Lu</li>
+<li>Aug. 2024</li>
+</ul>
+<p>Copyright © 2024 牛津大學台灣同學會 Oxford University Taiwanese Student Society. All rights reserved.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
